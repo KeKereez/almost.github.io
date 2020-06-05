@@ -1,0 +1,76 @@
+*
+    box-sizing: border-box
+body
+    +reg
+img 
+    max-width: 100%
+.container 
+    width: 1170px
+    margin: auto 
+@media (max-width: 1200px)
+    .container
+        width: 760px
+@media (max-width: 768px)
+    .container
+        max-width: 580px
+        width: 90%
+    .section
+        padding-top: 60px
+        padding-bottom: 60px
+    .button
+        &:hover
+            background-color: none !important
+            cursor: none !important
+    .arrows 
+        &__left, &__right
+            &:hover
+                cursor: none !important
+
+
+@media (max-width: 567px)
+    .container
+        max-width: 380px
+
+.button 
+    +bold
+    border-radius: 10px
+    background-color: $main-color
+    border: none
+    padding: 18px 30px
+    &:hover
+        background-color: lighten($main-color, 10%)
+        cursor: pointer
+    &:active, &:focus 
+        outline: none
+.section 
+    padding: 90px 0
+    &-title
+        max-width: 500px
+        font-size: 24px
+        +bold
+        text-align: center
+    &-subtitle
+        display: block
+        font-size: 16px
+.input
+    border: 1px solid $border-input
+    padding: 20px 26px
+    font-size: 15px
+    border-radius: 10px
+    &:focus
+        outline: none
+        border-color: $main-color
+.phone
+    +bold
+    color: $text-color
+    text-decoration: none
+.arrows 
+    &__left, &__right
+        &:hover
+            cursor: pointer
+.error
+    &:focus
+        border-color: $border-input-error
+        //background-color: $border-bg-error
+.bold
+    +bold
